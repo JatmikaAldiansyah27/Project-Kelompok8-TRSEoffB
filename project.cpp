@@ -4,17 +4,20 @@ using namespace std;
 
 
 // data
+string tanggal[50], jenis[50];
+int jumlah[50];
+int total = 0;
 int main() {
     int pilih;
 
     do {
-        cout << "=== PROGRAM KEUANGAN SEDERHANA ===";
-        cout << "1. Tambah Data";
-        cout << "2. Lihat Data";
-        cout << "3. Edit Data";
-        cout << "4. Hapus Data";
-        cout << "5. Keluar";
-        cout << "Pilih: ";
+        cout << "=== PROGRAM KEUANGAN SEDERHANA ===" <<endl;
+        cout << "1. Tambah Data"<<endl;
+        cout << "2. Lihat Data"<<endl;
+        cout << "3. Edit Data"<<endl;
+        cout << "4. Hapus Data"<<endl;
+        cout << "5. Keluar"<<endl;
+        cout << "Pilih: "<<endl;
         cin >> pilih;
 
         if (pilih == 1) {
@@ -36,47 +39,8 @@ int main() {
                 cout << "Data ke-" << i + 1 << endl;
                 cout << "Tanggal : " << tanggal[i] << endl;
                 cout << "Jenis   : " << jenis[i] << endl;
-                cout << "Jumlah  : " << rupiah(jumlah[i]) << endl;
+                cout << "Jumlah  : " << (jumlah[i]) << endl;
             }
-        }
-
-        else if (pilih == 3) {
-            int no;
-            cout << "Edit data nomor: ";
-            cin >> no;
-            no--;
-
-            cout << "Tanggal baru : ";
-            cin >> tanggal[no];
-            cout << "Jenis baru   : ";
-            cin >> jenis[no];
-            cout << "Jumlah baru  : ";
-            cin >> jumlah[no];
-
-            cout << "Data berhasil diedit!";
-        }
-
-        else if (pilih == 4) {
-            int no;
-            cout << "Hapus data nomor: ";
-            cin >> no;
-            no--;
-
-            for (int i = no; i < total - 1; i++) {
-                tanggal[i] = tanggal[i + 1];
-                jenis[i] = jenis[i + 1];
-                jumlah[i] = jumlah[i + 1];
-            }
-            total--;
-            cout << "Data berhasil dihapus!";
-        }
-
-        else if (pilih == 5) {
-            cout << "Program selesai.";
-        }
-
-        else {
-            cout << "Pilihan tidak valid!";
         }
     }
     return 0;
