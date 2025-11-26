@@ -17,7 +17,7 @@ int main() {
         cout << "3. Edit Data"<<endl;
         cout << "4. Hapus Data"<<endl;
         cout << "5. Keluar"<<endl;
-        cout << "Pilih: "<<endl;
+        cout << "Pilih: ";
         cin >> pilih;
 
         if (pilih == 1) {
@@ -28,11 +28,11 @@ int main() {
             cout << "Jumlah : ";
             cin >> jumlah[total];
             total++;
-            cout << "Data berhasil ditambah!";
+            cout << "Data berhasil ditambah!"<<endl;
         }
 
         else if (pilih == 2) {
-            cout << "=== DATA TRANSAKSI ===";
+            cout << "=== DATA TRANSAKSI ==="<<endl;
             if (total == 0) cout << "Belum ada data.";
 
             for (int i = 0; i < total; i++) {
@@ -42,6 +42,6 @@ int main() {
                 cout << "Jumlah  : " << (jumlah[i]) << endl;
             }
         }
-    }
+    }while (pilih != 5);
     return 0;
 }
