@@ -3,7 +3,7 @@ using namespace std;
 //function
 
 
-// tess 123
+// tess 6556
 string tanggal[50], jenis[50];
 int jumlah[50];
 int total = 0;
