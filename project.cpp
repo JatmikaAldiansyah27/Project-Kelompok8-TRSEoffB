@@ -2,11 +2,13 @@
 using namespace std;
 //function
 
+int tambah();
 
-// data
+// data edit
 string tanggal[50], jenis[50];
 int jumlah[50];
 int total = 0;
+
 int main() {
     int pilih;
 
@@ -45,3 +47,14 @@ int main() {
     }while (pilih != 5);
     return 0;
 }
+
+int tambah(){
+    cout << "Tanggal (dd/mm/yyyy) : ";
+    cin >> tanggal[total];
+    cout << "Jenis (Pemasukan/Pengeluaran) : ";
+    cin >> jenis[total];
+    cout << "Jumlah : ";
+    cin >> jumlah[total];
+    total++;
+    cout << "Data berhasil ditambah!"<<endl;
+};
