@@ -3,7 +3,7 @@ using namespace std;
 //function
 
 
-// gatau
+// data edit
 string tanggal[50], jenis[50];
 int jumlah[50];
 int total = 0;
